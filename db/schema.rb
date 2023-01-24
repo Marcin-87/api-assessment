@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_23_125844) do
+ActiveRecord::Schema.define(version: 2023_01_24_172056) do
 
   create_table "broadcasts", force: :cascade do |t|
     t.string "title"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2023_01_23_125844) do
     t.string "registration_ip"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "token"
     t.index ["broadcast_id"], name: "broadcast_id"
     t.index ["broadcast_id"], name: "index_subscriptions_on_broadcast_id"
     t.index ["email"], name: "index_subscriptions_on_email", unique: true
